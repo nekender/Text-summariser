@@ -2,6 +2,19 @@
 
 This application allows you to summarize an article by inputting the text directly into a web form.
 
+## Requirements
+
+Before running the application, make sure to install the following libraries:
+
+- `Flask`
+- `nltk`
+- `sumy`
+
+You can install these libraries using pip. Run the following command:
+
+```bash
+pip install flask nltk sumy
+
 ## Usage
 
 Follow the steps below to run the text summarizer web application:
