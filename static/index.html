@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarization Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #summary {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text Summarization Tool</h1>
+    <form id="textForm">
+        <label for="articleText">Enter your article text:</label><br>
+        <textarea id="articleText" name="articleText"></textarea><br>
+        <button type="button" onclick="summarizeText()">Get Summary</button>
+    </form>
+    <div id="summary">
+        <h2>Summarized Article:</h2>
+        <p id="summaryText"></p>
+    </div>
+
+    <script>
+        async function summarizeText() {
+            const articleText = document.getElementById('articleText').value;
+            if (!articleText.trim()) {
+                alert('Please enter some text.');
+                return;
+            }
+            
+            const response = await fetch('/summarize', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ text: articleText })
+            });
+            
+            if (response.ok) {
+                const result = await response.json();
+                document.getElementById('summaryText').innerText = result.summary;
+            } else {
+                alert('An error occurred. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
