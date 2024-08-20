@@ -1,27 +1,30 @@
-# Text Summarizer Script
+# Text Summarizer Web Application
 
-This script allows you to summarize an article by inputting the text directly into the terminal.
+This application allows you to summarize an article by inputting the text directly into a web form.
 
 ## Usage
 
-Follow the steps below to run the text summarizer script:
+Follow the steps below to run the text summarizer web application:
 
-1. **Run the Script:**
+1. **Run the Server:**
    - Open your terminal.
-   - Execute the following command to run the script:
+   - Navigate to the directory containing `app.py`.
+   - Execute the following command to start the server:
      ```bash
-     python text_summarizer.py
+     python app.py
      ```
 
-2. **Input the Article Text:**
-   - After running the script, you will be prompted to enter the article text.
-   - Type or paste the article text into the terminal.
-   - Press `Enter` twice (i.e., insert two empty lines) to signal the end of the input and run the summarizer.
+2. **Access the Web Interface:**
+   - Open your web browser and go to `http://127.0.0.1:5000`.
+   - You will see a web form where you can input your article text.
 
-3. **View the Summary:**
-   - Once you've entered the text, the script will display a "Summarizing..." message.
-   - After processing, the summary of the article will be displayed in the terminal.
+3. **Input the Article Text:**
+   - Type or paste the article text into the text area provided on the web page.
+   - Click on the `Get Summary` button to submit the text.
+
+4. **View the Summary:**
+   - After processing, the summary of the article will be displayed below the form on the same page.
 
 ## Conclusion
 
-This script provides a quick and easy way to summarize text directly from the terminal. Follow the instructions above to get started.
+This web application provides a user-friendly way to summarize text using a web interface. Follow the instructions above to input your text and receive a summary directly in your browser.
