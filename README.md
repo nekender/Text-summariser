@@ -14,7 +14,7 @@ You can install these libraries using pip. Run the following command:
 
 ```bash
 pip install flask nltk sumy
-
+```
 ## Usage
 
 Follow the steps below to run the text summarizer web application:
